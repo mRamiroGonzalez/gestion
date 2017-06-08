@@ -4,6 +4,7 @@ end
 
 cam_offset_y = nil
 
+-- 0x1e80 is the starting address of the 3rd sprite sheet
 function replace_tiles()
   if cam_offset_y then
     memcpy(0x2000 + cam_offset_y, 0x1e80, 128)
@@ -56,7 +57,7 @@ function can_place()
   --   or we are replacing something on a wall
   -- and that the action is on screen
   -- and that an item is selected
-  if (place_empty(mx, my, size.x, size.y) or mouse.item == const.tile_remove or replacing_wall(mx, my)) then
+  if (place_empty(mx, my, size.x, size.y) or mouse.item == const.tile_remove or replace_wall_by_door(mx, my)) then
     if (on_screen(mouse.x, mouse.y)) then
       if (mouse.item != 0) then
         return true
@@ -66,6 +67,6 @@ function can_place()
   return false
 end
 
-function replacing_wall(x, y)
+function replace_wall_by_door(x, y)
   return mget(x, y) >= 144 and mget(x,y) <= 156 and mouse.item == 7
 end
