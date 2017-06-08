@@ -38,6 +38,8 @@ function handle_clicks()
           mset(tile.x, tile.y, const.tile_default)
           update_connected_textures(const.tile_remove, tile.x, tile.y)
         end
+
+        -- prevents to draw multiple times on the same click
         mouse.place = false
       end
     end
