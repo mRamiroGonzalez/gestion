@@ -14,12 +14,6 @@ function ressources:new(o)
   return r
 end
 
-function ressources:change(ressource, quantity)
-  if (ressource == "wood") self.wood += quantity
-  if (ressource == "stone") self.stone += quantity
-  if (ressource == "people") self.people += quantity
-end
-
 function ressources:show()
   local x = flr(cam.x/8)*8 + 13*8 + 1
   local y = flr(cam.y/8)*8 + 1
