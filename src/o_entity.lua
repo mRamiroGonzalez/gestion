@@ -25,7 +25,7 @@ function entity:update()
       self:remove_from_entities()
     end
   else
-    local refresh_value = flr(60 / const.entity_draws_per_second)
+    local refresh_value = flr(30 / const.entity_draws_per_second)
     if ((counter % refresh_value) == 0) then
       self:animate(2)
     end
@@ -70,7 +70,7 @@ function draw_entities()
 end
 
 function update_entities()
-  local refresh_value = flr(60 / const.entity_updates_per_second)
+  local refresh_value = flr(30 / const.entity_updates_per_second)
   if ((counter % refresh_value) == 0) then
     for e in all(entities) do e:update() end
   end

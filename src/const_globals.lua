@@ -16,8 +16,10 @@ const = {
   tile_cancel = 22,
   tile_block = 24,
 
-  entity_updates_per_second = 30,
-  entity_draws_per_second = 2,
+  entity_updates_per_second = 15,
+  entity_draws_per_second = 1,
+
+  ressources_updates_per_second = 0.2,
 
   camera_max_x = 128 * 7, -- 1024 tiles horizontal, minus 128 for upper left corner
   camera_max_y = 128 + (3 * 8), -- 128 tiles, plus 3 for the menu
@@ -37,5 +39,6 @@ function init_globals()
   removed_tiles = {}
   cam = cam:new({})
   mouse = mouse:new({})
+  ressources = ressources:new({})
   counter = 0
 end

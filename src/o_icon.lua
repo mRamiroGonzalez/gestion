@@ -48,4 +48,8 @@ function init_menu()
   add_icon(6, 1, 21)
   add_icon(6, 2, 22)
   add_icon(8, 2, 23)
+
+  add_icon(12, 0, 25)
+  add_icon(12, 1, 26)
+  add_icon(12, 2, 27)
 end
