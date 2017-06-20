@@ -38,7 +38,7 @@ function print_log()
   print('ram: '..(ram or 0)..'/1024', cam.x+1, cam.y+8, 0)
   print('entities: '..count(entities), cam.x+1, cam.y+14, 0)
   print(is_between_two_walls(flr(mouse.x/8), flr(mouse.y/8)), cam.x+1, cam.y+20, 0)
-  print('counter: '..counter, cam.x+1, cam.y+26)
-
+  
+  --print('counter: '..counter, cam.x+1, cam.y+26)
   -- flr(mouse.x/8), flr(mouse.y/8)
 end
